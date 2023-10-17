@@ -32,27 +32,6 @@
     </hop>
   </order>
   <transform>
-    <name>Table input</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <execute_each_row>N</execute_each_row>
-    <limit>0</limit>
-    <sql>SELECT &lt;values> FROM &lt;table name> WHERE &lt;conditions></sql>
-    <variables_active>N</variables_active>
-    <attributes/>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>208</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>Dummy (do nothing)</name>
     <type>Dummy</type>
     <description/>
@@ -65,8 +44,8 @@
     </partitioning>
     <attributes/>
     <GUI>
-      <xloc>752</xloc>
-      <yloc>224</yloc>
+      <xloc>640</xloc>
+      <yloc>112</yloc>
     </GUI>
   </transform>
   <transform>
@@ -93,6 +72,27 @@
     <GUI>
       <xloc>848</xloc>
       <yloc>144</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <execute_each_row>N</execute_each_row>
+    <limit>0</limit>
+    <sql>SELECT &lt;values> FROM &lt;table name> WHERE &lt;conditions></sql>
+    <variables_active>N</variables_active>
+    <attributes/>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>208</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
