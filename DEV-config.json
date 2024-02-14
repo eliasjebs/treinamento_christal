@@ -1,0 +1,11 @@
+{
+  "variables" : [ {
+    "name" : "user_db",
+    "value" : "root",
+    "description" : ""
+  }, {
+    "name" : "ip_server_db",
+    "value" : "localhost",
+    "description" : ""
+  } ]
+}

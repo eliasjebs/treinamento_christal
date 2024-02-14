@@ -1,0 +1,11 @@
+{
+  "pipelinesToLog": [],
+  "loggingParentsOnly": true,
+  "name": "logpipe",
+  "intervalInSeconds": "30",
+  "executingPeriodically": false,
+  "pipelineFilename": "${PROJECT_HOME}/grava_logs_no_banco.hpl",
+  "executingAtEnd": true,
+  "enabled": true,
+  "executingAtStart": true
+}

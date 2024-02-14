@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline>
+  <info>
+    <name>excel_writer</name>
+    <name_sync_with_filename>Y</name_sync_with_filename>
+    <description/>
+    <extended_description/>
+    <pipeline_version/>
+    <pipeline_type>Normal</pipeline_type>
+    <parameters>
+    </parameters>
+    <capture_transform_performance>N</capture_transform_performance>
+    <transform_performance_capturing_delay>1000</transform_performance_capturing_delay>
+    <transform_performance_capturing_size_limit>100</transform_performance_capturing_size_limit>
+    <created_user>-</created_user>
+    <created_date>2023/10/19 10:34:50.470</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2023/10/19 10:34:50.470</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+    <hop>
+      <from>Grupo A</from>
+      <to>Switch / case</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / case</from>
+      <to>Add constants</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / case</from>
+      <to>Add constants 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / case</from>
+      <to>Add constants 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Switch / case</from>
+      <to>Add constants 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants 4</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants 2</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Add constants 3</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Dummy (do nothing)</from>
+      <to>Microsoft Excel writer</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <transform>
+    <name>Grupo A</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <data>
+      <line>
+        <item>Botafogo - Melhor do mundo</item>
+      </line>
+      <line>
+        <item>Fluminense</item>
+      </line>
+      <line>
+        <item>Flamengo</item>
+      </line>
+      <line>
+        <item>Vasco</item>
+      </line>
+    </data>
+    <fields>
+      <field>
+        <length>-1</length>
+        <precision>-1</precision>
+        <currency/>
+        <set_empty_string>N</set_empty_string>
+        <name>Times A</name>
+        <format/>
+        <group/>
+        <decimal/>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Switch / case</name>
+    <type>SwitchCase</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <case_value_decimal/>
+    <case_value_format/>
+    <case_value_group/>
+    <case_value_type>String</case_value_type>
+    <cases>
+      <case>
+        <target_transform>Add constants</target_transform>
+        <value>Botafogo</value>
+      </case>
+      <case>
+        <target_transform>Add constants 2</target_transform>
+        <value>Flamengo</value>
+      </case>
+      <case>
+        <target_transform>Add constants 3</target_transform>
+        <value>Fluminense</value>
+      </case>
+    </cases>
+    <default_target_transform>Add constants 4</default_target_transform>
+    <fieldname>Times A</fieldname>
+    <use_contains>Y</use_contains>
+    <attributes/>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Add constants</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>condicao</name>
+        <nullif>CAMPEAO</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>80</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Add constants 2</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>condicao</name>
+        <nullif>vice</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>272</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Add constants 3</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>condicao</name>
+        <nullif>serie c</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>352</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Add constants 4</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>condicao</name>
+        <nullif>resto</nullif>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <type>String</type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>176</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>208</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Microsoft Excel writer</name>
+    <type>TypeExitExcelWriterTransform</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <appendEmpty>0</appendEmpty>
+    <appendLines>N</appendLines>
+    <appendOffset>0</appendOffset>
+    <appendOmitHeader>N</appendOmitHeader>
+    <fields>
+      <field>
+        <commentAuthorField/>
+        <commentField/>
+        <format/>
+        <formula>N</formula>
+        <hyperlinkField/>
+        <name>Times A</name>
+        <styleCell/>
+        <title>Times A</title>
+        <titleStyleCell/>
+        <type>String</type>
+      </field>
+      <field>
+        <commentAuthorField/>
+        <commentField/>
+        <format/>
+        <formula>N</formula>
+        <hyperlinkField/>
+        <name>condicao</name>
+        <styleCell/>
+        <title>condicao</title>
+        <titleStyleCell/>
+        <type>String</type>
+      </field>
+    </fields>
+    <file>
+      <SpecifyFormat>N</SpecifyFormat>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <autosizecolums>N</autosizecolums>
+      <createParentFolder>Y</createParentFolder>
+      <date_time_format/>
+      <do_not_open_newfile_init>Y</do_not_open_newfile_init>
+      <extension>xls</extension>
+      <filename_field/>
+      <filename_in_field>N</filename_in_field>
+      <if_file_exists>new</if_file_exists>
+      <if_sheet_exists>new</if_sheet_exists>
+      <name>${PROJECT_HOME}/teste</name>
+      <password/>
+      <protect_sheet>N</protect_sheet>
+      <protected_by/>
+      <sheetname>Plan1</sheetname>
+      <split>N</split>
+      <splitevery>0</splitevery>
+      <stream_data>N</stream_data>
+    </file>
+    <footer>N</footer>
+    <forceFormulaRecalculation>N</forceFormulaRecalculation>
+    <header>Y</header>
+    <leaveExistingStylesUnchanged>N</leaveExistingStylesUnchanged>
+    <makeSheetActive>Y</makeSheetActive>
+    <rowWritingMethod>overwrite</rowWritingMethod>
+    <startingCell>A1</startingCell>
+    <template>
+      <enabled>N</enabled>
+      <filename>template.xls</filename>
+      <hidden>N</hidden>
+      <sheet_enabled>N</sheet_enabled>
+      <sheetname/>
+    </template>
+    <attributes/>
+    <GUI>
+      <xloc>1024</xloc>
+      <yloc>224</yloc>
+    </GUI>
+  </transform>
+  <transform_error_handling>
+  </transform_error_handling>
+  <attributes/>
+</pipeline>

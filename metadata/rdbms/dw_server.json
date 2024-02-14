@@ -1,0 +1,31 @@
+{
+  "rdbms": {
+    "MYSQL": {
+      "databaseName": "dw",
+      "pluginId": "MYSQL",
+      "accessType": 0,
+      "hostname": "192.168.0.246",
+      "password": "Encrypted 2be98afc86aa7f2e4cb13ab72cd85aad8",
+      "pluginName": "MySQL",
+      "port": "3306",
+      "driverClassName": "Mysql",
+      "attributes": {
+        "SUPPORTS_TIMESTAMP_DATA_TYPE": "N",
+        "STREAM_RESULTS": "N",
+        "EXTRA_OPTION_MYSQL.useCursorFetch": "true",
+        "EXTRA_OPTION_MYSQL.defaultFetchSize": "500",
+        "FORCE_IDENTIFIERS_TO_LOWERCASE": "N",
+        "PRESERVE_RESERVED_WORD_CASE": "Y",
+        "FORCE_IDENTIFIERS_TO_UPPERCASE": "N",
+        "QUOTE_ALL_FIELDS": "N",
+        "EXTRA_OPTION_MYSQL.zeroDateTimeBehaviorValue": "CONVERT_TO_NULL",
+        "SUPPORTS_BOOLEAN_DATA_TYPE": "Y",
+        "SQL_CONNECT": "",
+        "PREFERRED_SCHEMA_NAME": ""
+      },
+      "manualUrl": "",
+      "username": "root"
+    }
+  },
+  "name": "dw_server"
+}
